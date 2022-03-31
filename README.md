@@ -86,21 +86,21 @@
 "datadog.agent.up".over("*").by("host").last(2).count_by_status()
 ```
 
-<br/>
+<br/><br/>
 
 * Any host - clock goes out of sync with the time given by NTP. The offset threshold is configured in the Agent's ntp.yaml file.
 ```
 "ntp.in_sync".over("*").by("host").last(2).count_by_status()
 ```
 
-<br/>
+<br/><br/>
 
 * Any host - Internet Information Server (W3SVC) up
 ```
 "windows_service.state".over("windows_service:w3svc").by("host").last(2).count_by_status()
 ```
 
-<br/>
+<br/><br/>
 
 * Any host - Message Queuing (MSMQ) up 
 ```
